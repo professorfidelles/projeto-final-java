@@ -37,12 +37,15 @@
 					out.println("<td>"+listar.get(num).getNome()+"</td>");
 					out.println("<td>"+listar.get(num).getCpf()+"</td>");
 					out.println("<td>"+listar.get(num).getEmail()+"</td>");
+					out.println("<td><a href='update.jsp?id="+listar.get(num).getId()+"&nome="+listar.get(num).getNome()+"&cpf="+listar.get(num).getCpf()+"&email="+listar.get(num).getEmail()+"'>Edit</a></td>");
+					out.println("<td><a href='delete.jsp?id="+listar.get(num).getId()+"'>Delete</a></td>");
 					out.println("</tr>");
 				}
 				
 			%>
 		</tbody>
 	</table>
+	<a href="inserir.jsp" class="btn btn-primary">Novo Registro</a>
 	<script
 		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
